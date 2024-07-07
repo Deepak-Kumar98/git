@@ -1,0 +1,765 @@
+ubuntu@ip-10-0-0-80:~$ pwd
+/home/ubuntu
+ubuntu@ip-10-0-0-80:~$ uname
+Linux
+ubuntu@ip-10-0-0-80:~$ uname -v
+#9-Ubuntu SMP Fri May 17 14:39:23 UTC 2024
+ubuntu@ip-10-0-0-80:~$ uname -n
+ip-10-0-0-80
+ubuntu@ip-10-0-0-80:~$ uname -r
+6.8.0-1009-aws
+ubuntu@ip-10-0-0-80:~$ uname -m
+x86_64
+ubuntu@ip-10-0-0-80:~$ uname -a
+Linux ip-10-0-0-80 6.8.0-1009-aws #9-Ubuntu SMP Fri May 17 14:39:23 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+ubuntu@ip-10-0-0-80:~$ sudo lshw
+ip-10-0-0-80
+    description: Computer
+    product: HVM domU
+    vendor: Xen
+    version: 4.11.amazon
+    serial: ec266315-4482-6346-5aad-34f35cb067b8
+    width: 64 bits
+    capabilities: smbios-2.7 dmi-2.7 vsyscall32
+    configuration: boot=normal uuid=ec266315-4482-6346-5aad-34f35cb067b8
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-firmware
+          description: BIOS
+          vendor: Xen
+          physical id: 0
+          version: 4.11.amazon
+          date: 08/24/2006
+          size: 96KiB
+          capabilities: pci edd
+     *-cpu
+          description: CPU
+          product: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+          vendor: Intel Corp.
+          physical id: 401
+          bus info: cpu@0
+          version: 6.63.2
+          slot: CPU 1
+          size: 2400MHz
+          capacity: 2400MHz
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp x86-64 constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm cpuid_fault pti fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+          configuration: microcode=73
+     *-memory
+          description: System Memory
+          physical id: 1000
+          size: 1GiB
+          capacity: 1GiB
+          capabilities: ecc
+          configuration: errordetection=multi-bit-ecc
+        *-bank
+             description: DIMM RAM
+             physical id: 0
+             slot: DIMM 0
+             size: 1GiB
+             width: 64 bits
+     *-pci
+          description: Host bridge
+          product: 440FX - 82441FX PMC [Natoma]
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+        *-isa
+             description: ISA bridge
+             product: 82371SB PIIX3 ISA [Natoma/Triton II]
+             vendor: Intel Corporation
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa
+             configuration: latency=0
+           *-pnp00:00
+                product: PnP device PNP0c02
+                physical id: 0
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:01
+                product: PnP device PNP0c02
+                physical id: 1
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:02
+                product: PnP device PNP0b00
+                physical id: 2
+                capabilities: pnp
+                configuration: driver=rtc_cmos
+           *-pnp00:03
+                product: PnP device PNP0f13
+                physical id: 3
+                capabilities: pnp
+                configuration: driver=i8042 aux
+           *-pnp00:04
+                product: PnP device PNP0303
+                physical id: 4
+                capabilities: pnp
+                configuration: driver=i8042 kbd
+           *-pnp00:05
+                product: PnP device PNP0700
+                physical id: 5
+                capabilities: pnp
+           *-pnp00:06
+                product: PnP device PNP0501
+                physical id: 6
+                capabilities: pnp
+                configuration: driver=serial
+           *-pnp00:07
+                product: PnP device PNP0c02
+                physical id: 7
+                capabilities: pnp
+                configuration: driver=system
+        *-ide
+             description: IDE interface
+             product: 82371SB PIIX3 IDE [Natoma/Triton II]
+             vendor: Intel Corporation
+             physical id: 1.1
+             bus info: pci@0000:00:01.1
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ide isa_compat_mode bus_master
+             configuration: driver=ata_piix latency=64
+             resources: irq:0 ioport:1f0(size=8) ioport:3f6 ioport:170(size=8) ioport:376 ioport:c100(size=16)
+        *-bridge UNCLAIMED
+             description: Bridge
+             product: 82371AB/EB/MB PIIX4 ACPI
+             vendor: Intel Corporation
+             physical id: 1.3
+             bus info: pci@0000:00:01.3
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bridge
+             configuration: latency=0
+        *-display UNCLAIMED
+             description: VGA compatible controller
+             product: GD 5446
+             vendor: Cirrus Logic
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: vga_controller
+             configuration: latency=0
+             resources: memory:f0000000-f1ffffff memory:f3000000-f3000fff memory:c0000-dffff
+        *-generic
+             description: Unassigned class
+             product: Xen Platform Device
+             vendor: XenSource, Inc.
+             physical id: 3
+             bus info: pci@0000:00:03.0
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             configuration: driver=xen-platform-pci latency=0
+             resources: irq:28 ioport:c000(size=256) memory:f2000000-f2ffffff
+  *-input:0
+       product: Power Button
+       physical id: 1
+       logical name: input0
+       logical name: /dev/input/event0
+       capabilities: platform
+  *-input:1
+       product: Sleep Button
+       physical id: 2
+       logical name: input1
+       logical name: /dev/input/event1
+       capabilities: platform
+  *-input:2
+       product: AT Translated Set 2 keyboard
+       physical id: 3
+       logical name: input2
+       logical name: /dev/input/event2
+       logical name: input2::capslock
+       logical name: input2::numlock
+       logical name: input2::scrolllock
+       capabilities: i8042
+  *-input:3
+       product: ImExPS/2 Generic Explorer Mouse
+       physical id: 4
+       logical name: input4
+       logical name: /dev/input/event3
+       logical name: /dev/input/mouse0
+       capabilities: i8042
+  *-network
+       description: Ethernet interface
+       physical id: 5
+       logical name: enX0
+       serial: 02:6a:a7:ff:0c:bd
+       capabilities: ethernet physical
+       configuration: broadcast=yes driver=vif driverversion=6.8.0-1009-aws ip=10.0.0.80 link=yes multicast=yes
+ubuntu@ip-10-0-0-80:~$ hostnamectl
+ Static hostname: ip-10-0-0-80
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: ec266315448263465aad34f35cb067b8
+         Boot ID: 92edb9027b734f95a6613b7004f89b64
+  Virtualization: xen
+Operating System: Ubuntu 24.04 LTS
+          Kernel: Linux 6.8.0-1009-aws
+    Architecture: x86-64
+ Hardware Vendor: Xen
+  Hardware Model: HVM domU
+Firmware Version: 4.11.amazon
+   Firmware Date: Thu 2006-08-24
+    Firmware Age: 17y 10month 1w 6d
+ubuntu@ip-10-0-0-80:~$ add-apt-repository ppa:git-core/ppa
+Error: must run as root
+ubuntu@ip-10-0-0-80:~$ sudo add-apt-repository ppa:git-core/ppa
+PPA publishes dbgsym, you may need to include 'main/debug' component
+Repository: 'Types: deb
+URIs: https://ppa.launchpadcontent.net/git-core/ppa/ubuntu/
+Suites: noble
+Components: main
+'
+Description:
+The most current stable version of Git for Ubuntu.
+
+For release candidates, go to https://launchpad.net/~git-core/+archive/candidate .
+
+╔═════════════════════════════════════════════════════════╗
+║ NOTE ABOUT THE “WEAK ALGORITHM” WARNING IN UBUNTU 24.04 ║
+╚═════════════════════════════════════════════════════════╝
+For details about the warning “W: https://ppa.launchpadcontent.net/git-core/ppa/ubuntu/dists/noble/InRelease: Signature by key E1DD270288B4E6030699E45FA1715D88E1DF1F24 uses weak algorithm (rsa1024)”, see:
+
+https://discourse.ubuntu.com/t/new-requirements-for-apt-repository-signing-in-24-04/42854
+https://bugs.launchpad.net/ubuntu/+source/software-properties/+bug/2065932
+
+There’s nothing that PPA owners can do about this for now, as the key is fully controlled internally by Launchpad.
+More info: https://launchpad.net/~git-core/+archive/ubuntu/ppa
+Adding repository.
+Press [ENTER] to continue or Ctrl-c to cancel.
+Hit:1 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:3 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:4 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:5 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu noble InRelease [24.3 kB]
+Get:6 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 Packages [15.0 MB]
+Get:7 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble/universe Translation-en [5982 kB]
+Get:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [193 kB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [49.1 kB]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [2432 B]
+Get:11 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [65.1 kB]
+Get:12 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [23.0 kB]
+Get:13 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [8632 B]
+Get:14 http://security.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [2236 B]
+Get:15 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [145 kB]
+Get:16 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [27.8 kB]
+Get:17 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 c-n-f Metadata [420 B]
+Get:18 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [10.6 kB]
+Get:19 http://security.ubuntu.com/ubuntu noble-security/multiverse Translation-en [2808 B]
+Get:20 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [208 B]
+Get:21 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 c-n-f Metadata [344 B]
+Get:22 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 Components [3871 kB]
+Get:23 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu noble/main amd64 Packages [2844 B]
+Get:24 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 c-n-f Metadata [301 kB]
+Get:25 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu noble/main Translation-en [2088 B]
+Get:26 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [269 kB]
+Get:27 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble/multiverse Translation-en [118 kB]
+Get:28 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble/multiverse amd64 Components [35.0 kB]
+Get:29 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble/multiverse amd64 c-n-f Metadata [8328 B]
+Get:30 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [220 kB]
+Get:31 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [59.7 kB]
+Get:32 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 c-n-f Metadata [3596 B]
+Get:33 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [116 kB]
+Get:34 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [42.8 kB]
+Get:35 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [45.0 kB]
+Get:36 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 c-n-f Metadata [4752 B]
+Get:37 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [145 kB]
+Get:38 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [27.8 kB]
+Get:39 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 c-n-f Metadata [416 B]
+Get:40 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [14.1 kB]
+Get:41 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [3608 B]
+Get:42 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [212 B]
+Get:43 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 c-n-f Metadata [532 B]
+Get:44 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [208 B]
+Get:45 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-backports/main amd64 c-n-f Metadata [112 B]
+Get:46 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [8696 B]
+Get:47 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-backports/universe Translation-en [10.0 kB]
+Get:48 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [17.6 kB]
+Get:49 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-backports/universe amd64 c-n-f Metadata [988 B]
+Get:50 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:51 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 c-n-f Metadata [116 B]
+Get:52 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Get:53 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 c-n-f Metadata [116 B]
+Fetched 27.3 MB in 6s (4824 kB/s)
+Reading package lists... Done
+W: https://ppa.launchpadcontent.net/git-core/ppa/ubuntu/dists/noble/InRelease: Signature by key E1DD270288B4E6030699E45FA1715D88E1DF1F24 uses weak algorithm (rsa1024)
+ubuntu@ip-10-0-0-80:~$ spt update
+Command 'spt' not found, did you mean:
+  command 'spot' from snap spot (0.4.1)
+  command 'smt' from snap smt (0.2)
+  command 'opt' from deb llvm (1:17.0-58~exp1)
+  command 'spd' from deb spd (1.3.0-1.1)
+  command 'spc' from deb supercat (0.5.7-1)
+  command 'gpt' from deb gpt (1.1-7)
+  command 'ppt' from deb bsdgames (2.17-30)
+  command 'srt' from deb python3-pysrt (1.0.1-3)
+  command 'apt' from deb apt (2.7.6)
+  command 'slt' from deb slt (0.0.git20140301-6build3)
+  command 'dpt' from deb pkg-perl-tools (0.76)
+  command 'pt' from deb tcllib (1.21+dfsg-1)
+  command 'sqt' from deb python3-sqt (0.8.0-8)
+  command 'sptk' from deb sptk (3.9-3)
+  command 'st' from deb stterm (0.9-1)
+See 'snap info <snapname>' for additional versions.
+ubuntu@ip-10-0-0-80:~$ apt update
+Reading package lists... Done
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+W: Problem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permission denied)
+W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)
+ubuntu@ip-10-0-0-80:~$ sudo apt update
+Hit:1 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://eu-central-1.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:5 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu noble InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+5 packages can be upgraded. Run 'apt list --upgradable' to see them.
+W: https://ppa.launchpadcontent.net/git-core/ppa/ubuntu/dists/noble/InRelease: Signature by key E1DD270288B4E6030699E45FA1715D88E1DF1F24 uses weak algorithm (rsa1024)
+ubuntu@ip-10-0-0-80:~$ sudo apt install git
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  git-man
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn
+The following packages will be upgraded:
+  git git-man
+2 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
+Need to get 8833 kB of archives.
+After this operation, 11.3 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu noble/main amd64 git amd64 1:2.45.2-0ppa1~ubuntu24.04.1 [6686 kB]
+Get:2 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu noble/main amd64 git-man all 1:2.45.2-0ppa1~ubuntu24.04.1 [2147 kB]
+Fetched 8833 kB in 0s (20.9 MB/s)
+(Reading database ... 67739 files and directories currently installed.)
+Preparing to unpack .../git_1%3a2.45.2-0ppa1~ubuntu24.04.1_amd64.deb ...
+Unpacking git (1:2.45.2-0ppa1~ubuntu24.04.1) over (1:2.43.0-1ubuntu7.1) ...
+Preparing to unpack .../git-man_1%3a2.45.2-0ppa1~ubuntu24.04.1_all.deb ...
+Unpacking git-man (1:2.45.2-0ppa1~ubuntu24.04.1) over (1:2.43.0-1ubuntu7.1) ...
+Setting up git-man (1:2.45.2-0ppa1~ubuntu24.04.1) ...
+Setting up git (1:2.45.2-0ppa1~ubuntu24.04.1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@ip-10-0-0-80:~$ git --version
+git version 2.45.2
+ubuntu@ip-10-0-0-80:~$ which git
+/usr/bin/git
+ubuntu@ip-10-0-0-80:~$ ls -ltrh /usr/bin/git
+-rwxr-xr-x 1 root root 4.1M May 31 18:30 /usr/bin/git
+ubuntu@ip-10-0-0-80:~$ ls -l
+total 0
+ubuntu@ip-10-0-0-80:~$ pwd
+/home/ubuntu
+ubuntu@ip-10-0-0-80:~$ mkdir project007
+ubuntu@ip-10-0-0-80:~$ ls -l
+total 4
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:33 project007
+ubuntu@ip-10-0-0-80:~$ cd project007/
+ubuntu@ip-10-0-0-80:~/project007$ ls -l
+total 0
+ubuntu@ip-10-0-0-80:~/project007$ ls -al
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:33 .
+drwxr-x--- 5 ubuntu ubuntu 4096 Jul  7 04:33 ..
+ubuntu@ip-10-0-0-80:~/project007$ ls -l .git
+ls: cannot access '.git': No such file or directory
+ubuntu@ip-10-0-0-80:~/project007$ ls -l .git/
+ls: cannot access '.git/': No such file or directory
+ubuntu@ip-10-0-0-80:~/project007$ git init  # initialize a local git repository
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/ubuntu/project007/.git/
+ubuntu@ip-10-0-0-80:~/project007$ ls -l .git/
+total 32
+-rw-rw-r-- 1 ubuntu ubuntu   23 Jul  7 04:38 HEAD
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:38 branches
+-rw-rw-r-- 1 ubuntu ubuntu   92 Jul  7 04:38 config
+-rw-rw-r-- 1 ubuntu ubuntu   73 Jul  7 04:38 description
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:38 hooks
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:38 info
+drwxrwxr-x 4 ubuntu ubuntu 4096 Jul  7 04:38 objects
+drwxrwxr-x 4 ubuntu ubuntu 4096 Jul  7 04:38 refs
+ubuntu@ip-10-0-0-80:~/project007$ ls -l .git
+total 32
+-rw-rw-r-- 1 ubuntu ubuntu   23 Jul  7 04:38 HEAD
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:38 branches
+-rw-rw-r-- 1 ubuntu ubuntu   92 Jul  7 04:38 config
+-rw-rw-r-- 1 ubuntu ubuntu   73 Jul  7 04:38 description
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:38 hooks
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:38 info
+drwxrwxr-x 4 ubuntu ubuntu 4096 Jul  7 04:38 objects
+drwxrwxr-x 4 ubuntu ubuntu 4096 Jul  7 04:38 refs
+ubuntu@ip-10-0-0-80:~/project007$ ls -l
+total 0
+ubuntu@ip-10-0-0-80:~/project007$ ls -al
+total 12
+drwxrwxr-x 3 ubuntu ubuntu 4096 Jul  7 04:38 .
+drwxr-x--- 5 ubuntu ubuntu 4096 Jul  7 04:33 ..
+drwxrwxr-x 7 ubuntu ubuntu 4096 Jul  7 04:38 .git
+ubuntu@ip-10-0-0-80:~/project007$ ls -l .git/
+total 32
+-rw-rw-r-- 1 ubuntu ubuntu   23 Jul  7 04:38 HEAD
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:38 branches
+-rw-rw-r-- 1 ubuntu ubuntu   92 Jul  7 04:38 config
+-rw-rw-r-- 1 ubuntu ubuntu   73 Jul  7 04:38 description
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:38 hooks
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:38 info
+drwxrwxr-x 4 ubuntu ubuntu 4096 Jul  7 04:38 objects
+drwxrwxr-x 4 ubuntu ubuntu 4096 Jul  7 04:38 refs
+ubuntu@ip-10-0-0-80:~/project007$ rm -rf .git/
+ubuntu@ip-10-0-0-80:~/project007$ ls l-
+ls: cannot access 'l-': No such file or directory
+ubuntu@ip-10-0-0-80:~/project007$ la -al
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:40 .
+drwxr-x--- 5 ubuntu ubuntu 4096 Jul  7 04:33 ..
+ubuntu@ip-10-0-0-80:~/project007$ ls -al
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 04:40 .
+drwxr-x--- 5 ubuntu ubuntu 4096 Jul  7 04:33 ..
+ubuntu@ip-10-0-0-80:~/project007$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/ubuntu/project007/.git/
+ubuntu@ip-10-0-0-80:~/project007$ ls -al
+total 12
+drwxrwxr-x 3 ubuntu ubuntu 4096 Jul  7 04:40 .
+drwxr-x--- 5 ubuntu ubuntu 4096 Jul  7 04:33 ..
+drwxrwxr-x 7 ubuntu ubuntu 4096 Jul  7 04:40 .git
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+ubuntu@ip-10-0-0-80:~/project007$ touch 1.java 2.txt 3.c
+ubuntu@ip-10-0-0-80:~/project007$ ls -al
+total 12
+drwxrwxr-x 3 ubuntu ubuntu 4096 Jul  7 06:18 .
+drwxr-x--- 5 ubuntu ubuntu 4096 Jul  7 04:33 ..
+drwxrwxr-x 7 ubuntu ubuntu 4096 Jul  7 04:41 .git
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jul  7 06:18 1.java
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jul  7 06:18 2.txt
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jul  7 06:18 3.c
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        1.java
+        2.txt
+        3.c
+
+nothing added to commit but untracked files present (use "git add" to track)
+ubuntu@ip-10-0-0-80:~/project007$ git add 1.java
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        2.txt
+        3.c
+
+ubuntu@ip-10-0-0-80:~/project007$ git add .
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1.java
+        new file:   2.txt
+        new file:   3.c
+
+ubuntu@ip-10-0-0-80:~/project007$ vi 1.java
+ubuntu@ip-10-0-0-80:~/project007$ ls -l
+total 4
+-rw-rw-r-- 1 ubuntu ubuntu 14 Jul  7 06:21 1.java
+-rw-rw-r-- 1 ubuntu ubuntu  0 Jul  7 06:18 2.txt
+-rw-rw-r-- 1 ubuntu ubuntu  0 Jul  7 06:18 3.c
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   1.java
+        new file:   2.txt
+        new file:   3.c
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.java
+
+ubuntu@ip-10-0-0-80:~/project007$ git log
+fatal: your current branch 'master' does not have any commits yet
+ubuntu@ip-10-0-0-80:~/project007$ git commit -m "1st commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'ubuntu@ip-10-0-0-80.(none)')
+ubuntu@ip-10-0-0-80:~/project007$ git config --global user.email "abc@gmail.com"
+ubuntu@ip-10-0-0-80:~/project007$ git config --global user.name "Deepak"
+ubuntu@ip-10-0-0-80:~/project007$ git commit -m "1st commit"
+[master (root-commit) 45a107a] 1st commit
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.java
+ create mode 100644 2.txt
+ create mode 100644 3.c
+ubuntu@ip-10-0-0-80:~/project007$ git log
+commit 45a107aad17df8e4735c50c6b9880ca233fbb823 (HEAD -> master)
+Author: Deepak <abc@gmail.com>
+Date:   Sun Jul 7 06:25:05 2024 +0000
+
+    1st commit
+ubuntu@ip-10-0-0-80:~/project007$ git show 45a107aad17df8e4735c50c6b9880ca233fbb823
+commit 45a107aad17df8e4735c50c6b9880ca233fbb823 (HEAD -> master)
+Author: Deepak <abc@gmail.com>
+Date:   Sun Jul 7 06:25:05 2024 +0000
+
+    1st commit
+
+diff --git a/1.java b/1.java
+new file mode 100644
+index 0000000..e69de29
+diff --git a/2.txt b/2.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/3.c b/3.c
+new file mode 100644
+index 0000000..e69de29
+ubuntu@ip-10-0-0-80:~/project007$ vi 2.txt
+ubuntu@ip-10-0-0-80:~/project007$ "2.txt" 1L, 20B written
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.java
+        modified:   2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ubuntu@ip-10-0-0-80:~/project007$ git add .
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   1.java
+        modified:   2.txt
+
+ubuntu@ip-10-0-0-80:~/project007$ git commit -m "2nd commit"
+[master cde940f] 2nd commit
+ 2 files changed, 2 insertions(+)
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+nothing to commit, working tree clean
+ubuntu@ip-10-0-0-80:~/project007$ git log
+commit cde940f724196deb84742d423bc84d5a7d4d6b2d (HEAD -> master)
+Author: Deepak <abc@gmail.com>
+Date:   Sun Jul 7 06:30:08 2024 +0000
+
+    2nd commit
+
+commit 45a107aad17df8e4735c50c6b9880ca233fbb823
+Author: Deepak <abc@gmail.com>
+Date:   Sun Jul 7 06:25:05 2024 +0000
+
+    1st commit
+ubuntu@ip-10-0-0-80:~/project007$ git show 45a107aad17df8e4735c50c6b9880ca233fbb823
+commit 45a107aad17df8e4735c50c6b9880ca233fbb823
+Author: Deepak <abc@gmail.com>
+Date:   Sun Jul 7 06:25:05 2024 +0000
+
+    1st commit
+
+diff --git a/1.java b/1.java
+new file mode 100644
+index 0000000..e69de29
+diff --git a/2.txt b/2.txt
+new file mode 100644
+index 0000000..e69de29
+diff --git a/3.c b/3.c
+new file mode 100644
+index 0000000..e69de29
+ubuntu@ip-10-0-0-80:~/project007$ git show cde940f724196deb84742d423bc84d5a7d4d6b2d
+commit cde940f724196deb84742d423bc84d5a7d4d6b2d (HEAD -> master)
+Author: Deepak <abc@gmail.com>
+Date:   Sun Jul 7 06:30:08 2024 +0000
+
+    2nd commit
+
+diff --git a/1.java b/1.java
+index e69de29..2d44f6b 100644
+--- a/1.java
++++ b/1.java
+@@ -0,0 +1 @@
++How aare you!
+diff --git a/2.txt b/2.txt
+index e69de29..ec5fb96 100644
+--- a/2.txt
++++ b/2.txt
+@@ -0,0 +1 @@
++This is 2nd commit.
+ubuntu@ip-10-0-0-80:~/project007$ ls -l
+total 8
+-rw-rw-r-- 1 ubuntu ubuntu 14 Jul  7 06:21 1.java
+-rw-rw-r-- 1 ubuntu ubuntu 20 Jul  7 06:28 2.txt
+-rw-rw-r-- 1 ubuntu ubuntu  0 Jul  7 06:18 3.c
+ubuntu@ip-10-0-0-80:~/project007$ vi 3.c
+ubuntu@ip-10-0-0-80:~/project007$ git add .
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   3.c
+
+ubuntu@ip-10-0-0-80:~/project007$ git restore --staged 3.c
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   3.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ubuntu@ip-10-0-0-80:~/project007$ history
+    1  systemctl
+    2  clear
+    3  pwd
+    4  uname
+    5  uname -v
+    6  uname -n
+    7  uname -r
+    8  uname -m
+    9  uname -a
+   10  sudo lshw
+   11  hostnamectl
+   12  add-apt-repository ppa:git-core/ppa
+   13  sudo add-apt-repository ppa:git-core/ppa
+   14  spt update
+   15  apt update
+   16  sudo apt update
+   17  sudo apt install git
+   18  git --version
+   19  which git
+   20  ls -ltrh /usr/bin/git
+   21  ls -l
+   22  pwd
+   23  mkdir project007
+   24  ls -l
+   25  cd project007/
+   26  ls -l
+   27  ls -al
+   28  ls -l .git
+   29  ls -l .git/
+   30  git init  # initialize a local git repository
+   31  ls -l .git/
+   32  ls -l .git
+   33  ls -l
+   34  ls -al
+   35  ls -l .git/
+   36  rm -rf .git/
+   37  ls l-
+   38  la -al
+   39  ls -al
+   40  git init
+   41  ls -al
+   42  git status
+   43  touch 1.java 2.txt 3.c
+   44  ls -al
+   45  git status
+   46  git add 1.java
+   47  git status
+   48  git add .
+   49  git status
+   50  vi 1.java
+   51  ls -l
+   52  git status
+   53  git log
+   54  git commit -m "1st commit"
+   55  git config --global user.email "abc@gmail.com"
+   56  git config --global user.name "Deepak"
+   57  git commit -m "1st commit"
+   58  git log
+   59  git show 45a107aad17df8e4735c50c6b9880ca233fbb823
+   60  vi 2.txt
+   61  git status
+   62  git add .
+   63  git status
+   64  git commit -m "2nd commit"
+   65  git status
+   66  git log
+   67  git show 45a107aad17df8e4735c50c6b9880ca233fbb823
+   68  git show cde940f724196deb84742d423bc84d5a7d4d6b2d
+   69  ls -l
+   70  vi 3.c
+   71  git add .
+   72  git status
+   73  git restore --staged 3.c
+   74  git status
+   75  history
+ubuntu@ip-10-0-0-80:~/project007$
