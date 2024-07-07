@@ -762,4 +762,112 @@ ubuntu@ip-10-0-0-80:~/project007$ history
    73  git restore --staged 3.c
    74  git status
    75  history
+ubuntu@ip-10-0-0-80:~/project007$ touch now.log
+ubuntu@ip-10-0-0-80:~/project007$ ls -l
+total 12
+-rw-rw-r-- 1 ubuntu ubuntu 14 Jul  7 06:21 1.java
+-rw-rw-r-- 1 ubuntu ubuntu 20 Jul  7 06:28 2.txt
+-rw-rw-r-- 1 ubuntu ubuntu 20 Jul  7 06:33 3.c
+-rw-rw-r-- 1 ubuntu ubuntu  0 Jul  7 06:55 now.log
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   3.c
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        now.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ubuntu@ip-10-0-0-80:~/project007$ git add .
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   3.c
+        new file:   now.log
+
+ubuntu@ip-10-0-0-80:~/project007$ mkdir logs
+ubuntu@ip-10-0-0-80:~/project007$ touch logs/hello.java
+ubuntu@ip-10-0-0-80:~/project007$ ls -l
+total 16
+-rw-rw-r-- 1 ubuntu ubuntu   14 Jul  7 06:21 1.java
+-rw-rw-r-- 1 ubuntu ubuntu   20 Jul  7 06:28 2.txt
+-rw-rw-r-- 1 ubuntu ubuntu   20 Jul  7 06:33 3.c
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 06:57 logs
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jul  7 06:55 now.log
+ubuntu@ip-10-0-0-80:~/project007$ ls -l logs/
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Jul  7 06:57 hello.java
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   3.c
+        new file:   now.log
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        logs/
+
+ubuntu@ip-10-0-0-80:~/project007$ ls -l
+total 16
+-rw-rw-r-- 1 ubuntu ubuntu   14 Jul  7 06:21 1.java
+-rw-rw-r-- 1 ubuntu ubuntu   20 Jul  7 06:28 2.txt
+-rw-rw-r-- 1 ubuntu ubuntu   20 Jul  7 06:33 3.c
+drwxrwxr-x 2 ubuntu ubuntu 4096 Jul  7 06:57 logs
+-rw-rw-r-- 1 ubuntu ubuntu    0 Jul  7 06:55 now.log
+ubuntu@ip-10-0-0-80:~/project007$ git add .
+ubuntu@ip-10-0-0-80:~/project007$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   3.c
+        new file:   logs/hello.java
+        new file:   now.log
+
+ubuntu@ip-10-0-0-80:~/project007$ git commit -m ".gitignore added"
+[master da69332] .gitignore added
+ 3 files changed, 1 insertion(+)
+ create mode 100644 logs/hello.java
+ create mode 100644 now.log
+ubuntu@ip-10-0-0-80:~/project007$ git log
+commit da69332f1b7f88948be0aa302204eb39bf5cfe8d (HEAD -> master)
+Author: Deepak <abc@gmail.com>
+Date:   Sun Jul 7 06:59:24 2024 +0000
+
+    .gitignore added
+
+commit cde940f724196deb84742d423bc84d5a7d4d6b2d
+Author: Deepak <abc@gmail.com>
+Date:   Sun Jul 7 06:30:08 2024 +0000
+
+    2nd commit
+
+commit 45a107aad17df8e4735c50c6b9880ca233fbb823
+Author: Deepak <abc@gmail.com>
+Date:   Sun Jul 7 06:25:05 2024 +0000
+
+    1st commit
+ubuntu@ip-10-0-0-80:~/project007$ git show da69332f1b7f88948be0aa302204eb39bf5cfe8d
+commit da69332f1b7f88948be0aa302204eb39bf5cfe8d (HEAD -> master)
+Author: Deepak <abc@gmail.com>
+Date:   Sun Jul 7 06:59:24 2024 +0000
+
+    .gitignore added
+
+diff --git a/3.c b/3.c
+index e69de29..fdb42cf 100644
+--- a/3.c
++++ b/3.c
+@@ -0,0 +1 @@
++This is 3rd commit.
+diff --git a/logs/hello.java b/logs/hello.java
+new file mode 100644
+index 0000000..e69de29
+diff --git a/now.log b/now.log
+new file mode 100644
+index 0000000..e69de29
 ubuntu@ip-10-0-0-80:~/project007$
